@@ -1,8 +1,20 @@
 <div class="container">
-
   <div class="sight-element" *ngFor="let sight of sights">
-    <h4>{{sight.name}}</h4>
-      <sub>{{sight.longitude}} {{sight.latitude}}</sub>
+    <div (click)="open(content, sight)">
+      <h4>{{ sight.name }}</h4>
+      <sub>{{ sight.longitude }} {{ sight.latitude }}</sub>
       <div class="highlight" [style.background-color]="sight.getColor()"></div>
+    </div>
   </div>
+
+  <ng-template #content>
+    <div class="modal-header">
+      <h4 class="modal-title">
+        {{ selectedSight.name }}
+      </h4>
+    </div>
+    <div class="modal-body" [style.border-left]="'0.2em solid ' + selectedSight.getColor()">
+      {{ selectedSight.description }}
+    </div>
+  </ng-template>
 </div>
