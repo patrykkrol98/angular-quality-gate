@@ -14,6 +14,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { SightsListComponent } from './sights-list/sights-list.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {MatCardModule} from '@angular/material/card';
     ReactiveFormsModule,
     MatTabsModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
